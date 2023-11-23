@@ -29,13 +29,12 @@ def main():
             list_of_heaps.append(x)
         list_of_all_heaps.append(list_of_heaps)
 
-    # uncomment to draw graphs
+    #uncomment to draw graphs
     # for i in range(2,5):
     #     draw_graph(list_of_all_heaps[i-2][1].heap, i)
 
     draw_plots(list_of_all_heaps, number_of_data)
 
-    # uncomment to draw graphs
     # insert(list_of_all_heaps[0][1].heap, len(list_of_all_heaps[0][1].heap), 2, 1500000)
     # draw_graph(list_of_all_heaps[0][1].heap, 2, "heap_insert")
     # extract_max(list_of_all_heaps[0][1].heap, len(list_of_all_heaps[0][1].heap), 2)

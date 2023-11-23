@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 
 def draw_plots(l_o_a_h, _n_o_d):
     ax = plt.subplots()[1]
-
     for k in range(2, 5):
         temp_time_exe = []
         for i in l_o_a_h[k - 2]:
@@ -15,7 +14,7 @@ def draw_plots(l_o_a_h, _n_o_d):
     ax.set_title("For extraction operations")
     plt.savefig("plots/" + "extr" + ".png")
     plt.show()
-    
+
     ax = plt.subplots()[1]
     for k in range(2, 5):
         temp_time_build = []
@@ -28,4 +27,5 @@ def draw_plots(l_o_a_h, _n_o_d):
     ax.set_title("For build operations")
     plt.savefig("plots/" + "build" + ".png")
     plt.show()
+
     
