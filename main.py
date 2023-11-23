@@ -2,7 +2,7 @@ import random
 import time
 from heap import *
 from draw_graphs import *
-from draw_plots import draw_plot_for_build,draw_plot_for_execution
+from draw_plots import *
 
 
 def main():
@@ -29,18 +29,18 @@ def main():
             list_of_heaps.append(x)
         list_of_all_heaps.append(list_of_heaps)
 
-# uncomment to draw graphs
-    #draw_graph_2(list_of_all_heaps[0][1].heap,2,"2_heap")
-    #draw_graph_3(list_of_all_heaps[1][1].heap,3,"3_heap")
-    #draw_graph_4(list_of_all_heaps[2][1].heap,4,"4_heap")
-    draw_plot_for_build(list_of_all_heaps, number_of_data)
-    draw_plot_for_execution(list_of_all_heaps, number_of_data)
+    # uncomment to draw graphs
+    # for i in range(2,5):
+    #     draw_graph(list_of_all_heaps[i-2][1].heap, i)
 
-    # insert(list_of_all_heaps[0][1].heap,len(list_of_all_heaps[0][1].heap),2,1500000)
-    # draw_graph_2(list_of_all_heaps[0][1].heap,2,"heap_insert")
+    draw_plots(list_of_all_heaps, number_of_data)
 
-    # extract_max(list_of_all_heaps[0][1].heap,len(list_of_all_heaps[0][1].heap),2)
-    # draw_graph_2(list_of_all_heaps[0][1].heap,2,"heap_extr")
-    
+    # uncomment to draw graphs
+    # insert(list_of_all_heaps[0][1].heap, len(list_of_all_heaps[0][1].heap), 2, 1500000)
+    # draw_graph(list_of_all_heaps[0][1].heap, 2, "heap_insert")
+    # extract_max(list_of_all_heaps[0][1].heap, len(list_of_all_heaps[0][1].heap), 2)
+    # draw_graph(list_of_all_heaps[0][1].heap, 2, "heap_extr")
+
+
 if __name__ == "__main__":
     main()
