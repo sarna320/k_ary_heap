@@ -4,7 +4,7 @@ from heap import *
 from draw_graphs import *
 from draw_plots import *
 
-
+# Autor Pawel Sarnacki
 def main():
     list_entry = []
     for i in range(0, 100000):
@@ -12,11 +12,11 @@ def main():
 
     number_of_data = list(range(10000, 110000, 10000))
 
-    list_of_all_heaps = []
+    list_of_all_heaps = [] # list for every k, example: list[0] holds list of all heaps for k=2 and for every list_entry[n]
     for k in range(2, 5):
-        list_of_heaps = []
+        list_of_heaps = [] # list for current k
         for i in number_of_data:
-            temp = list_entry[0:i]
+            temp = list_entry[0:i] # copy, cuz we do not want to change original data
             start = time.process_time()
             build_heap(temp, len(temp), k)
             stop = time.process_time()
@@ -26,7 +26,7 @@ def main():
                 extract_max(temp, len(temp), k)
             stop = time.process_time()
             x.extraction_time = stop - start
-            list_of_heaps.append(x)
+            list_of_heaps.append(x) # we push current heap formed from list_entry for curren value from number_of_data[]
         list_of_all_heaps.append(list_of_heaps)
 
     #uncomment to draw graphs

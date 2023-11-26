@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-
+# Autor Pawel Sarnacki
 def draw_plots(l_o_a_h, _n_o_d):
     ax = plt.subplots()[1]
     for k in range(2, 5):
