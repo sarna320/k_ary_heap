@@ -1,4 +1,3 @@
-
 # Autor Piort Niedzialek
 class Heap:
     def __init__(self, h, bt, et):
