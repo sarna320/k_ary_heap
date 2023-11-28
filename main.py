@@ -17,13 +17,14 @@ def main():
         list_of_heaps = [] # list for current k
         for i in number_of_data:
             temp = list_entry[0:i] # copy, cuz we do not want to change original data
+            x = Heap(h=temp, bt=0, et=0)
             start = time.process_time()
-            build_heap(temp, len(temp), k)
+            x.build_heap(len(temp), k)
             stop = time.process_time()
-            x = Heap(h=temp, bt=stop - start, et=0)
+            x.build_time = stop - start
             start = time.process_time()
             for ii in range(0, i):
-                extract_max(temp, len(temp), k)
+                x.extract_max(k)
             stop = time.process_time()
             x.extraction_time = stop - start
             list_of_heaps.append(x) # we push current heap formed from list_entry for curren value from number_of_data[]
